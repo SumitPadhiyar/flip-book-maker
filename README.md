@@ -1,5 +1,5 @@
 # FlipBookMaker
-`src/main/java/flipbookmaker` contains source files for FlipBookMaker. Flip language is described in `LANGUAGE_DESIGN.md`.
+Source files for FlipBookMaker are located at `src/main/java/flipbookmaker`. Flip language is described in `LANGUAGE_DESIGN.md`.
 
 ### Setup
 1. Install Maven
