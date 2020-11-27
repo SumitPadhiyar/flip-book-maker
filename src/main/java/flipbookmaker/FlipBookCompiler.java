@@ -19,7 +19,7 @@ import flipbookmaker.parser.model.Statement;
 public class FlipBookCompiler {
     public static void main(String[] args) {
         Options options = new Options();
-        Option output = new Option("o", "output", true, "output file");
+        Option output = new Option("o", "output", true, "output file path");
         options.addOption(output);
 
         Option input = new Option("i", "input", true, "input file path");

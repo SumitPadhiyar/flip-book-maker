@@ -41,7 +41,6 @@ public class Parser {
     private static boolean checkFileExtension(String filePath){
         int index = filePath.lastIndexOf('.');
         if(index < 1) return false;
-
         return filePath.substring(index+1).equals(FLIP_FILE_EXTENSION);
     }  
 
@@ -58,7 +57,7 @@ public class Parser {
             ArrayList<String> imagePaths = null;
 
             if(isStatic){
-                staticLayout = Layout.valueOf(layoutStr);
+                staticLayout = Layout.fromString(layoutStr);
                 currentTokenIndex++;
                 
                 int images = Integer.parseInt(tokens[currentTokenIndex++]);

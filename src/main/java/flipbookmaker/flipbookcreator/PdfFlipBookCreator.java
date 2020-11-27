@@ -17,16 +17,12 @@ import flipbookmaker.parser.model.StaticStatement;
 
 public class PdfFlipBookCreator implements FlipBookCreator {
 
-
-
     @Override
     public void createFlipBook(String outputFilePath, List<Statement> flipProgram) {
         PDDocument document = new PDDocument();
 
-        int i = 1;
         try {
             for (Statement st : flipProgram) {
-                System.out.println("Statement #" + i++);
                 switch (st.getType()) {
                     case STATIC:
                         processStaticFlips(document, (StaticStatement)st);
@@ -46,7 +42,7 @@ public class PdfFlipBookCreator implements FlipBookCreator {
       
     }
 
-    void processStaticFlips(PDDocument document, StaticStatement st) throws IOException {
+    private void processStaticFlips(PDDocument document, StaticStatement st) throws IOException {
         PDPage page;
         PDPageContentStream contentStream;
 
@@ -65,7 +61,6 @@ public class PdfFlipBookCreator implements FlipBookCreator {
         for(int i=1;i<=st.getNoOfPages();i++){
             page = new PDPage();
             document.addPage(page);
-            System.out.println("Added page #" + i);
 
             contentStream = new PDPageContentStream(document, page);
             pdImage = pdImages.get(0);
@@ -77,6 +72,7 @@ public class PdfFlipBookCreator implements FlipBookCreator {
             startX = (mediaBox.getWidth() - width)/2;
             startY = (mediaBox.getHeight() - height)/2;
 
+            // Currently only supporting single image on page
             // Center an image
             contentStream.drawImage(pdImages.get(0), startX, startY , width, height);
 
