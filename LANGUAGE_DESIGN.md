@@ -9,7 +9,7 @@ implemented:
 3. (Not Implemented) Single/Mutiple images motion on a range of continuous pages. Every image has a start & end coordinate. Image starts at start cordinate & ends at end cordinate. Motion is shown uniformly across flip pages. Superimpose(default) layout is the only supported layout.
 4. (Not Implemented) Single/Mutiple static images with Single/Mutiple images motion.
 
-### How to write flip file?
+### How to write a flip file?
 1. <#pages> superimpose 1 <image_path>
 2. Flip file is parsed from top. So pages are added as described by each statement. For example
 3. To show `image1` after first image
@@ -20,7 +20,7 @@ implemented:
 4. To show `image1` twice on after first image
 ```
 1 superimpose 1 demo\images\childhood.jpg
-1 superimpose 1 image1.jpg
+2 superimpose 1 image1.jpg
 ```
     
 
