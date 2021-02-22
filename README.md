@@ -11,4 +11,4 @@ Source files for FlipBookMaker are located at `src/main/java/flipbookmaker`. Fli
 
 ### Improvements
 1. Implementing dynamic flips by changing the position of a single image on flip pages
-2. Less decoupling between `Parser` module and `FlipBookCreator` module
+2. Reduce coupling between `Parser` module and `FlipBookCreator` module
